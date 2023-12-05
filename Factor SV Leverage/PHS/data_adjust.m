@@ -1,0 +1,29 @@
+%data_adjust
+
+y_order_demean=y_order-mean(y_order,2);
+y_order_demean_used=[y_order_demean(1,:);
+                    y_order_demean(2,:);
+                    y_order_demean(3,:);
+                    y_order_demean(4,:);
+                    y_order_demean(5,:);
+                    y_order_demean(6,:);
+                    y_order_demean(8,:);
+                    y_order_demean(9,:);
+                    y_order_demean(10,:);
+                    y_order_demean(11,:);
+                    y_order_demean(12,:);
+                    y_order_demean(13,:);
+                    y_order_demean(15,:);
+                    y_order_demean(16,:);
+                    y_order_demean(17,:);
+                    y_order_demean(18,:);
+                    y_order_demean(19,:);
+                    y_order_demean(20,:);
+                    y_order_demean(21,:);
+                    y_order_demean(22,:);
+                    y_order_demean(23,:);
+                    y_order_demean(24,:);
+                    y_order_demean(27,:);
+                    y_order_demean(28,:);
+                    y_order_demean(29,:);
+                    y_order_demean(30,:)];
