@@ -1,0 +1,1 @@
+This MATLAB software implements the correlated particle hybrid sampler from the paper "Particle MCMC and correlated particle hybrid sampler for State Space Models".The folder gives the code for implementing CPHS for the Factor GARCH diffusion model.The main code is CPHS_GARCHdiffusion.m
