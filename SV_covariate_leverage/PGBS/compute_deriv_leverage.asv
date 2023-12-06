@@ -1,0 +1,21 @@
+%derivatives of tau
+
+%-----------------------------
+syms theta_tau T theta_rho phi h1 mu ht htmin1 epsmin1
+
+tau=exp(theta_tau);
+rho=(1-exp(-2*theta_rho))/(1+exp(-2*theta_rho));
+
+express_f1=-0.5*log(tau)-log(pi*(1+tau));
+express_f2=-(T/2)*log(tau);
+express_f3=-((T-1)/2).*(1-rho^2);
+express_f4=-((1-phi^2).*(h1-mu).^2)./(2*tau);
+express_f5=-0.5.*(1/(tau*(1-rho^2))).*((ht-mu)-phi.*(htmin1-mu)-rho.*sqrt(tau).*epsmin1);
+express_f=express_f1+express_f2+express_f3+express_f4+express_f5;
+
+deriv_f1=-exp(theta_tau)/(exp(theta_tau) + 1) - 1/2;
+deriv_f2=-T/2;
+deriv_f3=0;
+deriv_f4=-(exp(-theta_tau)*(phi^2 - 1)*(h1 - mu)^2)/2;
+deriv_f5=(epsmin1(1,1:T-1).*(exp(-2.*theta_rho) - 1))./(4.*exp(theta_tau).^(1/2).*(exp(-2.*theta_rho) + 1).*((exp(-2.*theta_rho) - 1).^2./(exp(-2.*theta_rho) + 1).^2 - 1)) - (exp(-theta_tau)*(ctraj(1,2:T) - mu - phi*(ctraj(1,1:T-1) - mu) + (epsmin1(1,1:T-1).*exp(theta_tau).^(1/2).*(exp(-2.*theta_rho) - 1))./(exp(-2.*theta_rho) + 1)))./(2.*((exp(-2.*theta_rho) - 1).^2./(exp(-2.*theta_rho) + 1).^2 - 1));
+

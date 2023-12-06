@@ -1,0 +1,1 @@
+This MATLAB software implements the correlated particle hybrid sampler from the paper "Particle MCMC and correlated particle hybrid sampler for State Space Models".The folder gives the code for implementing CPMMH for the univariate SV model with leverage and covariates. The main code is CPMMH_SV_leverage.m
