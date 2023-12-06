@@ -1,0 +1,1 @@
+This MATLAB software implements the correlated particle hybrid sampler from the paper "Particle MCMC and correlated particle hybrid sampler for State Space Models".The folder "PHS" gives the PHS sampler.  The main code is PHS_SV_leverage.m.
